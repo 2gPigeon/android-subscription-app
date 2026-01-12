@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Subscription</string>
+    <string name="widget_description">次回支払い予定のサブスクリプションを表示</string>
+</resources>

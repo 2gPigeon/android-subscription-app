@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/widget_background">
+
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="次回の支払い"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 左側: アイコン -->
+        <ImageView
+            android:id="@+id/widget_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="サービスアイコン"
+            android:scaleType="centerCrop" />
+
+        <!-- 右側: テキスト情報 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/widget_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="サービス名"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/widget_days_until"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="あと3日"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:paddingTop="2dp" />
+
+            <TextView
+                android:id="@+id/widget_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥1,500"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget_update_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新: 00:00"
+        android:textSize="9sp"
+        android:textColor="#AAAAAA"
+        android:gravity="end"
+        android:paddingTop="4dp" />
+
+</LinearLayout>
