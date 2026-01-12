@@ -88,6 +88,11 @@ fun DashboardScreen(
                         TopSection(
                             nextPayment = uiState.nextPayment,
                             monthlyTotal = uiState.monthlyTotal,
+                            normalizedMonthlyTotal = uiState.normalizedMonthlyTotal,
+                            remainingThisMonthTotal = uiState.remainingThisMonthTotal,
+                            costPerUseTop = uiState.costPerUseTop,
+                            monthlyBreakdown = uiState.monthlyBreakdown,
+                            cardOrder = uiState.cardOrder,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .weight(0.3f)

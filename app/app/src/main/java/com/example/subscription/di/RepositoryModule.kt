@@ -5,6 +5,7 @@ import com.example.subscription.data.local.dao.ExchangeRateDao
 import com.example.subscription.data.local.dao.SubscriptionDao
 import com.example.subscription.data.repository.NextPaymentCalculator
 import com.example.subscription.data.repository.SubscriptionRepository
+import com.example.subscription.data.preferences.DashboardPreferencesRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,5 +32,13 @@ object RepositoryModule {
         @ApplicationContext context: Context
     ): SubscriptionRepository {
         return SubscriptionRepository(subscriptionDao, exchangeRateDao, calculator, context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDashboardPreferencesRepository(
+        @ApplicationContext context: Context
+    ): DashboardPreferencesRepository {
+        return DashboardPreferencesRepository(context)
     }
 }
